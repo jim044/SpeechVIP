@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "made-the-vip-talk-226914",
+  "private_key_id": "b70c39d1dcb84dad605152fee4f6a6b247e237d5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCzcK6TV1uZ+8Ko\nyOHp08HmO3NzcuB+N/mG2fM0bNAtWW9zuJHezqmLWJQA2pbAiE5LFEsfqVjgRaDA\nU1vZash8Iyi9aNe2z5Vrz8XZegxnBPWSMv9YZ/q36s8C3e0oKoPlHB66u23t70p5\nNW6DnihO4bSYLHHxzNFZsHr13229lfOnDcrKdUcjIk1dAKiG7cYP5mYKdKcbrQCy\nfaM+6fM+D26+RCnYq21G+HcUY36WxSuy+42wX3wDQemBFjiXDRU0e/HFC/90KonQ\ndWAzOm0yJ2eVWJ6FuLekyac8dDuT30YuZChPKWT0LrHMi3loltzoFP+lG1+jyKZ4\nkIbPnjfPAgMBAAECggEAVuF6rV1xPSuwUw+8jn4YlnR3kFDxUDui5f+WKW58F1ED\nzRhzDFmsrorrUkSEFGGK4wBG5WQV47Tiwew6fxkcTDqryZW/SETW+JXnmkZlReYZ\nTrnBd5kUxEL9C0rPvpBjPyWv3ULN1ZP0T56mzTRhGNxgmAOBAg3k2VPBHVYaaN2m\nNhi5zpQCOOAV3BkGLM3AA5kgGAaqBCLI01zEllXUb8/Gu4yQIPpz+9p854mMuSUf\ng075uXujCrIaABc8mYb2X326MxN9Bevowr2Z+bFvY0/k0ba4U+L7MyFCKmwdclnN\nhHAA+KnnuFAN8wIlAN12Gfv7SpiQmykWvfliP+2IsQKBgQDyX8ZZvzxYYDD9ticq\nCp5BAzUepGr8TV1LrPUszvLhmLwdkMYNVLOD4GQAG2VRfCSMw5MOJguXmCVCa8ij\nEQR08S9nyXwLN8TjMeKPZAPRASdetBCopTBW9awvyzVA48P9zuqS0WdTEQtz0XR9\n/GPCDEC+ORF/uhUyhT5iDLY7/wKBgQC9hyrqPQFttSPuE1hIo6AGUL8Tv3x5Y4yV\nC0vygWuUkjtGZ5sZ6MgZTd9zrUD1XN1K6zWEp9UWjWojInGEG3mggVrYc1yszBdf\nYnAii31jKK0QwuLAO+/r+dSRjEdRefVPI8o7vrAYktiEW9xqI7pS4Za6poz5GTGl\nAGS/+zNEMQKBgQDpwdNEZXsm5Qb6+v4Evx7oJtbJiduhIGBVhycjIyj+yVbM0P8i\nhklobDcmH0X1c9ywYkNnBuxxNYzh5aApHVWGD8MfvyRCkXPzhv4yO0yu/ATjgpj6\nfe8EP4bkxYDD56f0FucH2KxlYfAAsMdAZvYzhau/irzEykx9YCLNX+M2MwKBgBLJ\n8J4yGA8pMvuqHUluNzIJFTg+9ncOQGSSLyBGZkTfTlMHeF/ULOodRzaviU4Ju8Ju\nmOqivMQ0lr4O7xP6qU8ZI8lrfld/EB4boyQ5kd+fq7CKsXH/PyS0qrcXIgbYwVHs\nKWNM3yZAgIh2lt5K1nDa/ldYpYcYUUybQmGp5IYxAoGBAKSl7m/qzf2YcC4xQlhn\nsXt0eZL1z3RWlXgK4RFXUZ8kpaiaIYCrbLSG0/zz7JW0/tJazDKh29UXrsc0gNC0\n1gKSFWJmcxta4esmE9AmYI5CEv0R12FLP/c2YhZqK+q6AWioYGg+8XuvBq1nf6aq\nOg3JpR1L3rtx/K7cpDEdN2os\n-----END PRIVATE KEY-----\n",
+  "client_email": "starting-account-6wybu4ebzbck@made-the-vip-talk-226914.iam.gserviceaccount.com",
+  "client_id": "113980383827769429911",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/starting-account-6wybu4ebzbck%40made-the-vip-talk-226914.iam.gserviceaccount.com"
+}

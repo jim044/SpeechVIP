@@ -1,0 +1,18 @@
+#sentence{
+	width: 100%;
+}
+
+#input-sentence{
+	width: 50%;
+	margin-top: 2%;
+	margin-left: 25%;
+}
+
+#textsearch-sentence{
+	width: 65%;
+	display: inline;
+}
+
+#button-sentence{
+	width: 25%;
+}
