@@ -7,6 +7,7 @@ app.get('/', function (req, res) {
 
 require('./lib/accueil.js')(app)
 require('./lib/convertSong.js')(app)
+require('./lib/videotoaudio.js')(app)
 
 
 app.listen(3000, function () {
