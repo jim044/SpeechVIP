@@ -27,6 +27,7 @@
     "fs": "0.0.1-security",
     "get-video-duration": "^1.0.3",
     "mysql": "^2.16.0",
-    "node-lame": "^1.2.0"
+    "node-lame": "^1.2.0",
+    "path": "^0.12.7"
   }
 }
