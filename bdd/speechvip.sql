@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 05, 2019 at 02:33 PM
+-- Generation Time: May 08, 2019 at 11:14 AM
 -- Server version: 5.5.62-0+deb8u1
 -- PHP Version: 5.6.40-0+deb8u2
 
@@ -95,16 +95,7 @@ CREATE TABLE IF NOT EXISTS `video` (
   `id_format` int(11) DEFAULT NULL,
   `nom` varchar(254) CHARACTER SET utf8 NOT NULL,
   `duree` double NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `video`
---
-
-INSERT INTO `video` (`id`, `id_personne`, `id_language`, `id_format`, `nom`, `duree`) VALUES
-(10, NULL, NULL, NULL, 'Le_discours_complet_de_Donald_Trump_devant_les_électeurs_après_sa_victoire.mp4', 905.52),
-(11, NULL, NULL, NULL, 'Les_discours_de_Donald_Trump_que_vous_ne_verrez_pas_dans_le_petit_journal..mp4', 299.766133),
-(12, NULL, NULL, NULL, 'Immigration,_Venezuela,_Corée_du_Nord___le_résumé_du_discours_de_Trump.mp4', 241.76);
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -199,7 +190,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `video`
 --
 ALTER TABLE `video`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `video_cut`
 --
