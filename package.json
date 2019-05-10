@@ -19,15 +19,18 @@
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.0.17",
     "@google-cloud/speech": "^2.3.1",
+    "body-parser": "^1.19.0",
     "child_process": "^1.0.2",
     "express": "^4.16.4",
     "ffmpeg": "0.0.4",
     "ffmpeg-extract-audio": "^1.0.2",
     "fluent-ffmpeg": "^2.1.2",
     "fs": "0.0.1-security",
+    "get-audio-duration": "^1.0.0",
     "get-video-duration": "^1.0.3",
     "mysql": "^2.16.0",
     "node-lame": "^1.2.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "sleep": "^6.1.0"
   }
 }
