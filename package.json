@@ -28,9 +28,9 @@
     "fs": "0.0.1-security",
     "get-audio-duration": "^1.0.0",
     "get-video-duration": "^1.0.3",
+    "grpc": "^1.20.3",
     "mysql": "^2.16.0",
     "node-lame": "^1.2.0",
-    "path": "^0.12.7",
-    "sleep": "^6.1.0"
+    "path": "^0.12.7"
   }
 }
