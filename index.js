@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
 require('./lib/speechToWord.js')(app)
 require('./lib/convertSong.js')(app)
 require('./lib/videotoaudio.js')(app)
-
+require('./lib/mergeVideo.js')(app)
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!')
