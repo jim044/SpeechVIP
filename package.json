@@ -1,8 +1,28 @@
 {
-  "name": "jim044",
+  "name": "speechvip",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "@google-cloud/speech": "^3.2.1",
+    "body-parser": "^1.19.0",
+    "child_process": "^1.0.2",
+    "express": "^4.16.4",
+    "ffmpeg": "0.0.4",
+    "ffmpeg-extract-audio": "^1.0.2",
+    "fluent-ffmpeg": "^2.1.2",
+    "fs": "0.0.1-security",
+    "get-audio-duration": "^1.0.0",
+    "get-video-duration": "^1.0.3",
+    "grpc": "^1.20.3",
+    "mysql": "^2.17.1",
+    "node-lame": "^1.2.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,22 +35,5 @@
   "bugs": {
     "url": "https://github.com/jim044/SpeechVIP/issues"
   },
-  "homepage": "https://github.com/jim044/SpeechVIP#readme",
-  "dependencies": {
-    "@ffmpeg-installer/ffmpeg": "^1.0.17",
-    "@google-cloud/speech": "^2.3.1",
-    "body-parser": "^1.19.0",
-    "child_process": "^1.0.2",
-    "express": "^4.16.4",
-    "ffmpeg": "0.0.4",
-    "ffmpeg-extract-audio": "^1.0.2",
-    "fluent-ffmpeg": "^2.1.2",
-    "fs": "0.0.1-security",
-    "get-audio-duration": "^1.0.0",
-    "get-video-duration": "^1.0.3",
-    "grpc": "^1.20.3",
-    "mysql": "^2.16.0",
-    "node-lame": "^1.2.0",
-    "path": "^0.12.7"
-  }
+  "homepage": "https://github.com/jim044/SpeechVIP#readme"
 }
