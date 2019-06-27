@@ -7,9 +7,12 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
 
+app.use('/css',express.static(__dirname +'/css'));
+
 app.get('/', function (req, res) {
-  res.send('Hello World!')
+	res.sendFile(__dirname + "/html/accueil.html");
 });
+
 
 require('./lib/speechToWord.js')(app)
 require('./lib/convertSong.js')(app)
