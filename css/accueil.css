@@ -1,5 +1,6 @@
 #sentence{
 	width: 100%;
+	margin-top:2%;
 }
 
 #input-sentence{
@@ -7,20 +8,23 @@
 }
 
 #textsearch-sentence{
-	width: 35%;
+	width: 55%;
 	float: left;
-	margin-left: 15%;
+	margin-left: 5%;
+	height: 10%;
 }
 
 #button-sentence{
 	width: 15%;
 	float: left;
 	margin-left: 2%;
+	height: 10%;
 }
 
 #button-create{
 	width: 15%;
 	float: left;
 	margin-left: 2%;
+	height: 10%;
 }
 

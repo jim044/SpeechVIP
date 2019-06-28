@@ -9,6 +9,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 app.use('/css',express.static(__dirname +'/css'));
 app.use('/video',express.static(__dirname +'/video'));
+app.use('/video/Create_Video',express.static(__dirname +'/video/Create_Video'));
 app.use('/node_modules',express.static(__dirname +'/node_modules'));
 
 app.get('/', function (req, res) {

@@ -19,35 +19,7 @@
   <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
   <script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
   <script src='https://vjs.zencdn.net/7.5.5/video.js'></script>
-
-<div ng-app="myApp" ng-controller="customersCtrl"> 
-
-<table>
-  <tr ng-repeat="x in details">
-    <td>{{ x.firstName }}</td>
-    <td>{{ x.lastName }}</td>
-  </tr>
-</table>
-
-</div>
-
-<script>
-var app = angular.module('myApp', []);
-app.controller('customersCtrl', function($scope, $http) {
-
-  $http.get("/getVideo").then(function(response){ 
-      console.log(response.data)
-      $scope.details = response.data; // here you will get data
- },function(res){
-      console.log("Error",res) //error occured
- });
-
-    // $http.get("/getVideo")
-    // .then(function (response) {$scope.names = response.data.records; console.log(response.data.records)});
-});
-</script>
-
-<!-- 
+  
   <link rel="stylesheet" type="text/css" href="css/accueil.css" />
 </head>
 <body>
@@ -57,20 +29,63 @@ app.controller('customersCtrl', function($scope, $http) {
     <input type="text" class="form-control" id="textsearch-sentence" aria-describedby="sentenceHelp" placeholder="Enter a sentence">
     <button type="submit" class="btn btn-primary" id='button-sentence'>Search</button>
     <button type="submit" class="btn btn-success" id='button-create'>Create</button>
+    <div ng-app="myApp" ng-controller="customersCtrl">
+      <div id="divVideo"></div>
+    </div>
   </div>
-</div>
 </form>
 
 
 
-<video id='my-video' class='video-js' controls preload='auto' width='640' height='264'
-poster='MY_VIDEO_POSTER.jpg' data-setup='{}'>
-<source src="../video/Attente/Barack_Obamas_final_speech_as_president_video_highlights.mp4" type='video/mp4'>
-  <p class='vjs-no-js'>
-    To view this video please enable JavaScript, and consider upgrading to a web browser that
-    <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
-  </p>
-</video> -->
+
+<!--   <div ng-app="myApp" ng-controller="customersCtrl"> 
+
+    <table>
+      <tr ng-repeat="x in details">
+         <td>{{ x.lienVideo }}</td> 
+      </tr>
+    </table>
+
+  </div> -->
+
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('customersCtrl', function($scope, $http) {
+
+      $http.get("/getVideo").then(function(response){ 
+      $scope.details = response.data; // here you will get data
+      videosource = shuffle(response.data);
+
+      var body = "<table width='100%' height='575' >"
+      for(var j=0;j<videosource.length;j++)
+      {
+        body +="<td width='25%' height='25%'  style='display:inline;' > <video width='500px' height='500px' id='"+j+"' src='" + videosource[j]['lienVideo'] + "' controls='false'" +" style=' margin-left:5%;'</td>";
+
+      }
+      body += "</tr>";
+      body += "</table>";
+
+      $("#divVideo").html(body);
+
+    },function(res){
+      console.log("Error",res) //error occured
+    });
+    });
+
+    function shuffle(a) {
+      var j, x, i;
+      for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+      }
+      return a;
+    }
+
+  </script>
+
+
 
 
 
