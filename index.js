@@ -27,6 +27,7 @@ require('./lib/videotoaudio.js')(app)
 require('./lib/mergeVideo.js')(app)
 require('./lib/accueil.js')(app)
 require('./lib/admin.js')(app)
+require('./lib/updateData.js')(app)
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!')

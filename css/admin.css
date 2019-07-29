@@ -12,3 +12,49 @@
 {
 	margin-left:40%;
 }
+
+#dropdownPersonne
+{
+	float: left;
+width: 25%;
+margin-left: 5%;
+}
+
+
+#addPeople {
+    float: left;
+    width: 45%;
+    margin-left: 25%;
+}
+
+
+#submitAddPersonne
+{
+	width: 20%;
+margin-left: 1%;
+}
+
+
+
+
+
+#dropdownLanguage
+{
+	float: left;
+width: 25%;
+margin-left: 5%;
+}
+
+
+#addLanguage {
+    float: left;
+    width: 45%;
+    margin-left: 25%;
+}
+
+
+#submitAddLanguage
+{
+	width: 20%;
+margin-left: 1%;
+}

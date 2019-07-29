@@ -6,7 +6,8 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
@@ -15,7 +16,7 @@
 
   <body>
 
-  
+
     <form ref='uploadForm' id='uploadForm' action="/uploadVideo" method="post" encType="multipart/form-data">
       <div class="form-group">
         <div class="input-group mb-3">
@@ -27,13 +28,70 @@
             <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
           </div>
         </div>
-        <input class="btn btn-primary" type="submit" value="Envoyer le fichier">
-      </div>
-      
-    </form>
 
-    <script>
-          $("[type=file]").on("change", function(){
+        <div>
+          <div>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownPersonne" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Personne
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Donald Trump</a>
+                <a class="dropdown-item" href="#">Barack Obama</a>
+                <a class="dropdown-item" href="#">Hillary Clinton</a>
+              </div>
+            </div>
+            <!-- <form ref='addPeopleForm' id='addPeopleForm' action="/addPeople" method="post"> -->
+              <div class="form-group">
+                <div id="addPeopleForm">
+                  <input type="text" class="form-control" id="addPeople" aria-describedby="peopleHelp" placeholder="Personne">
+                </div>
+              </div>
+              <button class="btn btn-secondary" type="button" id="submitAddPersonne" aria-expanded="false">
+                Ajouter la personne
+              </button>
+
+            </div>
+
+            <div>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Langue
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Anglais</a>
+                  <a class="dropdown-item" href="#">Français</a>
+                  <a class="dropdown-item" href="#">Espagnol</a>
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                <div id="addLanguageForm">
+                  <input type="text" class="form-control" id="addLanguage" aria-describedby="languageHelp" placeholder="Language">
+                </div>
+              </div>
+
+              
+              <button class="btn btn-secondary" type="button" id="submitAddLanguage" aria-expanded="false">
+                Ajouter la langue
+              </button>
+
+            </div>
+          </div>
+
+          <input class="btn btn-primary" type="submit" value="Envoyer le fichier">
+
+
+        </div>
+
+
+
+
+      </form>
+
+      <script>
+        $("[type=file]").on("change", function(){
           // Name of file and placeholder
           var file = this.files[0].name;
           var dflt = $(this).attr("accept");
@@ -42,6 +100,42 @@
           } else {
             $(this).next().text(dflt);
           }
+        });
+
+        $( "#submitAddPersonne" ).click(function() {
+          console.log($("#addPeople").val())
+
+          var data = {};
+          data.nomPrenom = $("#addPeople").val();
+          
+          $.ajax({
+            type: 'POST',
+            data: JSON.stringify(data),
+            contentType: 'application/json',
+            url: '/addPeople',            
+            success: function(data) {
+              console.log('success');
+              console.log(JSON.stringify(data));
+            }
+          });    
+        });
+
+        $( "#submitAddLanguage" ).click(function() {
+          console.log($("#addLanguage").val())
+
+          var data = {};
+          data.language = $("#addLanguage").val();
+          
+          $.ajax({
+            type: 'POST',
+            data: JSON.stringify(data),
+            contentType: 'application/json',
+            url: '/addLanguage',            
+            success: function(data) {
+              console.log('success');
+              console.log(JSON.stringify(data));
+            }
+          });    
         });
       </script>
 
@@ -52,5 +146,5 @@
 </form>  -->    
 
 
-  </body>
+</body>
 </html>
