@@ -47,7 +47,7 @@
                   <input type="text" class="form-control" id="addPeople" aria-describedby="peopleHelp" placeholder="Personne">
                 </div>
               </div>
-              <button class="btn btn-secondary" type="button" id="submitAddPersonne" aria-expanded="false">
+              <button class="btn btn-warning" type="button" id="submitAddPersonne" aria-expanded="false">
                 Ajouter la personne
               </button>
 
@@ -73,14 +73,14 @@
               </div>
 
               
-              <button class="btn btn-secondary" type="button" id="submitAddLanguage" aria-expanded="false">
+              <button class="btn btn-warning" type="button" id="submitAddLanguage" aria-expanded="false">
                 Ajouter la langue
               </button>
 
             </div>
           </div>
 
-          <input class="btn btn-primary" type="submit" value="Envoyer le fichier">
+          <input id="inputEnvoieFichier" class="btn btn-primary" type="submit" value="Envoyer le fichier">
 
 
         </div>
@@ -91,6 +91,12 @@
       </form>
 
       <script>
+
+         $(".dropdown-menu a").click(function(){
+            $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+            $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+          });
+         
         $("[type=file]").on("change", function(){
           // Name of file and placeholder
           var file = this.files[0].name;
