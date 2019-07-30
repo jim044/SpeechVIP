@@ -35,7 +35,7 @@
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownPersonne" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Personne
               </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <div  class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="#">Donald Trump</a>
                 <a class="dropdown-item" href="#">Barack Obama</a>
                 <a class="dropdown-item" href="#">Hillary Clinton</a>
@@ -79,23 +79,14 @@
 
             </div>
           </div>
-
           <input id="inputEnvoieFichier" class="btn btn-primary" type="submit" value="Envoyer le fichier">
-
-
         </div>
-
-
-
 
       </form>
 
       <script>
 
-         $(".dropdown-menu a").click(function(){
-            $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
-            $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
-          });
+         
          
         $("[type=file]").on("change", function(){
           // Name of file and placeholder
@@ -112,7 +103,7 @@
           console.log($("#addPeople").val())
 
           var data = {};
-          data.nomPrenom = $("#addPeople").val();
+          data.language = $("#addPeople").val();
           
           $.ajax({
             type: 'POST',
@@ -122,7 +113,10 @@
             success: function(data) {
               console.log('success');
               console.log(JSON.stringify(data));
-            }
+            },
+            error : function(resultat, statut, erreur){
+             console.log(resultat);
+             }
           });    
         });
 
@@ -143,6 +137,39 @@
             }
           });    
         });
+
+        getPersonne();
+        function getPersonne()
+        {
+          $.ajax({
+            type: 'POST',
+            contentType: 'application/json',
+            url: '/getPersonne',            
+            success: function(data) {
+              var jsonGetPersonne = data;
+              $( "#dropdownPersonne" ).next("div").empty();
+              for(var i = 0; i < jsonGetPersonne.length; i++) {
+                  var obj = jsonGetPersonne[i]
+                  $( "#dropdownPersonne" ).next("div").append( '<a onclick="dropDownFunction("'  + obj.PrenomNom  + '")" class="dropdown-item" href="#">' + obj.PrenomNom + '</a>' );
+                  console.log(obj.PrenomNom);
+              }
+            }
+          });
+
+            
+        
+        }
+
+        function dropDownFunction(prenomNom)
+        { 
+          console.log(prenomNom)
+        }
+
+        $(".dropdown-menu a").click(function(){
+            console.log("test")
+            $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+            $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+          });  
       </script>
 
 

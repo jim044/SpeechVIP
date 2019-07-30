@@ -16,8 +16,8 @@
 #dropdownPersonne
 {
 	float: left;
-width: 25%;
-margin-left: 5%;
+width: 20%;
+margin-left: 10%;
 }
 
 
@@ -30,7 +30,7 @@ margin-left: 5%;
 
 #submitAddPersonne
 {
-	width: 20%;
+	width: 170px;
 margin-left: 1%;
 }
 
@@ -41,8 +41,8 @@ margin-left: 1%;
 #dropdownLanguage
 {
 	float: left;
-width: 25%;
-margin-left: 5%;
+width: 20%;
+margin-left: 10%;
 }
 
 
@@ -55,7 +55,7 @@ margin-left: 5%;
 
 #submitAddLanguage
 {
-	width: 20%;
+	width: 170px;
 margin-left: 1%;
 }
 
