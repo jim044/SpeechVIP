@@ -61,5 +61,22 @@ margin-left: 1%;
 
 #inputEnvoieFichier
 {
-	margin-top:5%;
+	margin-top: 5%;
+	float: left;
+	width: 25%;
+	/*margin-left: 0%;*/
 }
+
+#submitConvertirVideo
+{
+	margin-top: 1%;
+	float: left;
+	width: 15%;
+	margin-left:40%;
+}
+
+#convertirVideo
+{
+	margin-top:8%;
+}
+
