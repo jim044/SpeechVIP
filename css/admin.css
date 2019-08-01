@@ -48,8 +48,15 @@ margin-left: 10%;
 
 #addLanguage {
     float: left;
-    width: 45%;
+    width: 20%;
     margin-left: 25%;
+}
+
+#addCodeLanguage
+{
+    float: left;
+	width: 20%;
+	margin-left: 5%;
 }
 
 
@@ -79,4 +86,5 @@ margin-left: 1%;
 {
 	margin-top:8%;
 }
+
 
