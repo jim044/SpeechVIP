@@ -8,6 +8,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
 
+app.use('/lib',express.static(__dirname +'/lib'));
 app.use('/css',express.static(__dirname +'/css'));
 app.use('/video',express.static(__dirname +'/video'));
 app.use('/video/Create_Video',express.static(__dirname +'/video/Create_Video'));
