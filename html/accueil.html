@@ -29,10 +29,10 @@
   <link rel="stylesheet" type="text/css" href="css/accueil.css" />
 </head>
 <body>
- <!-- <form> -->
+ <form id='uploadFormVideo' action="/mergevideo" method="post">
   <div id='sentence'>
    <div id='input-sentence'>
-    <input type="text" class="form-control" id="textsearch-sentence" aria-describedby="sentenceHelp" placeholder="Enter a sentence">
+    <input type="text" class="form-control" name="textsearchSentence" id="textsearch-sentence" aria-describedby="sentenceHelp" placeholder="Enter a sentence">
     <button type="submit" class="btn btn-primary" id='button-sentence'>Search</button>
     <button type="submit" class="btn btn-success" id='button-create'>Create</button>
     <div ng-app="myApp" ng-controller="customersCtrl">
@@ -40,7 +40,7 @@
       </div>
     </div>
   </div>
-<!-- </form> -->
+</form>
 
 
 
@@ -80,24 +80,24 @@
       return a;
     }
 
-    $( "#button-create" ).click(function() { 
+    // $( "#button-create" ).click(function() { 
     
-        console.log($("#textsearch-sentence").val());
-        var data = {};
-        data.textVideo = $("#textsearch-sentence").val();
+    //     console.log($("#textsearch-sentence").val());
+    //     var data = {};
+    //     data.textVideo = $("#textsearch-sentence").val();
 
-        $.ajax({
-          type: 'POST',
-          data: JSON.stringify(data),
-          contentType: 'application/json',
-          url: '/mergevideo',            
-          success: function(data) {
-            console.log('success');
-            console.log(JSON.stringify(data));
+    //     $.ajax({
+    //       type: 'POST',
+    //       data: JSON.stringify(data),
+    //       contentType: 'application/json',
+    //       url: '/mergevideo',            
+    //       success: function(data) {
+    //         console.log('success');
+    //         console.log(JSON.stringify(data));
             
-          }
-        });
-      });
+    //       }
+    //     });
+    //   });
     
 
   </script>
