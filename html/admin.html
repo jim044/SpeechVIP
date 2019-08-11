@@ -148,7 +148,7 @@
         });
 
        $( "#submitAddPersonne" ).click(function() {
-        console.log($("#addPeople").val())
+        // console.log($("#addPeople").val())
 
         var data = {};
         data.nomPrenom = $("#addPeople").val();
@@ -160,17 +160,17 @@
           url: '/addPeople',            
           success: function(data) {
             console.log('success');
-            console.log(JSON.stringify(data));
+            // console.log(JSON.stringify(data));
             getPersonne();
           },
           error : function(resultat, statut, erreur){
-           console.log(resultat);
+           // console.log(resultat);
          }
        });    
       });
 
        $( "#submitAddLanguage" ).click(function() {
-        console.log($("#addLanguage").val())
+        // console.log($("#addLanguage").val())
 
         var data = {};
         data.language = $("#addLanguage").val();
@@ -183,7 +183,7 @@
           url: '/addLanguage',            
           success: function(data) {
             console.log('success');
-            console.log(JSON.stringify(data));
+            // console.log(JSON.stringify(data));
             getLanguage();
           }
         });    
@@ -262,14 +262,14 @@
 
       function clickLinkVideo(id, idLink, extension)
       {
-        console.log('"' + '#' + id + '"')
+        // console.log('"' + '#' + id + '"')
         var idLinkHashTag =  '#' + id
         $(idLinkHashTag).parent().find('a').removeClass('active');
         $(idLinkHashTag).addClass('active');
       }
 
       $('.list-group a').click(function(e) {
-        console.log("tst")
+        // console.log("tst")
           e.preventDefault()
 
           $that = $(this);
