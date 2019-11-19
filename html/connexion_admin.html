@@ -1,0 +1,48 @@
+<html>
+
+<head>
+  <title>Connexion Admin</title>
+  <meta content="">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/connexion_admin.css" />
+</head>
+<body>
+
+<div class="login-page">
+  <div class="form">
+    <form class="login-form" id='connexion_admin_form' action="/connexion_admin" method="post">
+      <input type="text" name="identifiant" id="identifiant" placeholder="Identifiant"/>
+      <input type="password" name="mot_de_passe" id="mot_de_passe" placeholder="Mot de passe"/>
+      <button id="connexion_admin">Connexion</button>
+    </form>
+  </div>
+</div>
+
+<script type="text/javascript">
+	$('.message a').click(function(){
+	   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+	});
+
+/*       $( "#connexion_admin" ).click(function() {
+        // console.log($("#addLanguage").val())
+
+        var data = {};
+        data.identifiant = $("#identifiant").val();
+        data.mot_de_passe = $("#mot_de_passe").val();
+
+        $.ajax({
+          type: 'POST',
+          data: JSON.stringify(data),
+          contentType: 'application/json',
+          url: '/connexion_admin',            
+          success: function(data) {
+            console.log('success');
+            
+          }
+        });    
+      });*/
+
+</script>
+
+</body>
+</html>
