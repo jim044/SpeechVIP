@@ -55,8 +55,7 @@
       var body = "<table width='100%' height='575' >"
       for(var j=0;j<videosource.length;j++)
       {
-        console.log('"' + videosource[j]["lienVideo"] + '"')
-        body +='<td style="display:inline;" > <video width="25%" id="'+j+'" src="' + videosource[j]["lienVideo"] + '" controls="false"' +' style=" margin-left:5%; margin-top:2%;" class="vidchaVideo" poster="explore.jpg" controls</td>';
+        body +='<td style="display: block; width: 1500px; height: 150px;"> <video width="25%" id="'+j+'" src="' + videosource[j]["lienVideo"] + '" controls="false"' +' style="" class="vidchaVideo" poster="explore.jpg" controls></video> <label style="">Test ' + j + '</label> </td>';
 
       }
       body += "</tr>";
