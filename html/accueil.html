@@ -30,18 +30,19 @@
 </head>
 <body>
  <form id='uploadFormVideo' action="/mergevideo" method="post">
-  <div id='sentence'>
+<!--   <div id='sentence'> -->
    <div id='input-sentence'>
     <input type="text" class="form-control" name="textsearchSentence" id="textsearch-sentence" aria-describedby="sentenceHelp" placeholder="Enter a sentence">
     <button type="submit" class="btn btn-primary" id='button-sentence'>Search</button>
     <button type="submit" class="btn btn-success" id='button-create'>Create</button>
-    <div ng-app="myApp" ng-controller="customersCtrl">
-      <div id="divVideo">
-      </div>
-    </div>
   </div>
+<!--   </div> -->
 </form>
 
+  <div ng-app="myApp" ng-controller="customersCtrl">
+    <div id="divVideo">
+    </div>
+  </div>
 
 
   <script>
@@ -51,15 +52,15 @@
       $http.get("/getVideo").then(function(response){ 
       $scope.details = response.data; // here you will get data
       videosource = shuffle(response.data);
-
-      var body = "<table width='100%' height='575' >"
+      /*console.log(videosource)*/
+      var body = ""
       for(var j=0;j<videosource.length;j++)
       {
-        body +='<td style="display: block; width: 1500px; height: 150px;"> <video width="25%" id="'+j+'" src="' + videosource[j]["lienVideo"] + '" controls="false"' +' style="" class="vidchaVideo" poster="explore.jpg" controls></video> <label style="">Test ' + j + '</label> </td>';
+        body +=' <div class="video"> <video controls id="'+j+'" class="vidchaVideo"> <source src="' + videosource[j]["lienVideo"] + '" type="video/mp4" label="Francais"></video> </div> ';
 
       }
-      body += "</tr>";
-      body += "</table>";
+/*      body += "</tr>";
+      body += "</table>";*/
 
       $("#divVideo").html(body);
 

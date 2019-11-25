@@ -4,27 +4,51 @@
 }
 
 #input-sentence{
-	width: 100%;
+	text-align: center;
+	margin-top: 2%;
 }
 
 #textsearch-sentence{
-	width: 55%;
-	float: left;
-	margin-left: 10%;
-	height: 7%;
+	zoom: 1;
+    display: inline;
+    width: 55%;
+    height: 7%;
+    margin: 0 10px 10px 0;
 }
 
 #button-sentence{
-	width: 15%;
-	float: left;
-	margin-left: 2%;
-	height: 7%;
+	zoom: 1;
+    display: inline;
+    width: 15%;
+    height: 7%;
+    margin: 0 10px 10px 0;
 }
 
 #button-create{
-	width: 15%;
-	float: left;
-	margin-left: 2%;
-	height: 7%;
+	zoom: 1;
+    display: inline;
+    width: 15%;
+    height: 7%;
+    margin: 0 10px 10px 0;
 }
+
+
+
+#divVideo {
+    text-align: center;
+}
+
+#divVideo div.video {
+    zoom: 1;
+    display: inline;
+    width: 400px;
+    height: 200px;
+    margin: 0 80px 10px 0;
+}
+
+#divVideo div.video video {
+    width: 400px;
+    height: 200px;
+}
+
 
