@@ -56,11 +56,9 @@
       var body = ""
       for(var j=0;j<videosource.length;j++)
       {
-        body +=' <div class="video"> <video controls id="'+j+'" class="vidchaVideo"> <source src="' + videosource[j]["lienVideo"] + '" type="video/mp4" label="Francais"></video> </div> ';
+        body +='      <figure id="figureID"><video id="videoID" title="' + videosource[j]["nomVideo"] + '" preload="auto" controls><source src="' + videosource[j]["lienVideo"] + '" type="video/ogg"><p>Wildlife</p></video><figcaption>' + videosource[j]["nomVideo"] + '</figcaption></figure> ';
 
       }
-/*      body += "</tr>";
-      body += "</table>";*/
 
       $("#divVideo").html(body);
 
