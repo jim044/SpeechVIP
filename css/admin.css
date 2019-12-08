@@ -68,10 +68,9 @@ margin-left: 1%;
 
 #inputEnvoieFichier
 {
-	margin-top: 5%;
+	margin-top: 1%;
 	float: left;
-	width: 25%;
-	/*margin-left: 0%;*/
+	width: 20%;
 }
 
 #submitConvertirVideo
@@ -85,6 +84,18 @@ margin-left: 1%;
 #convertirVideo
 {
 	margin-top:8%;
+}
+
+#YoutubeURLForm
+{
+	margin-top:8%;
+}
+
+#YoutubeURLButton
+{
+	margin-top: 1%;
+	float: left;
+	width: 20%;
 }
 
 

@@ -28,13 +28,20 @@
             <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
           </div>
         </div>
-
-        
-        <input id="inputEnvoieFichier"  class="btn btn-primary" type="submit" value="Envoyer le fichier">
+        <input id="inputEnvoieFichier"  class="btn btn-primary" type="submit" value="Send files">
 
       </div>
 
     </form>
+
+
+
+    <!-- <form id="YoutubeURLForm" ref='uploadFormYoutubeURL' id='uploadFormYoutubeURL' action="/uploadVideoYoutubeURL" method="post" encType="multipart/form-data"> -->
+      <div class="form-group">
+        <input type="text" class="form-control" id="YoutubeURLInput" placeholder="Put the Youtube URL">
+        </div>
+        <input type="submit" id="YoutubeURLButton" class="btn btn-primary" value="Download Youtube Video">
+    <!-- </form> -->
 
 
     <div id="convertirVideo">
@@ -102,6 +109,26 @@
       <script>
 
         
+      $( "#YoutubeURLButton" ).click(function() {
+
+        console.log($("#YoutubeURLInput").val())
+        //console.log($('.list-group a').parent().find('li').find('active'))
+        var data = {};
+        data.URLYoutube = $("#YoutubeURLInput").val();
+
+        //console.log(data)
+
+        $.ajax({
+          type: 'POST',
+          data: JSON.stringify(data),
+          contentType: 'application/json',
+          url: '/uploadVideoYoutubeURL',            
+          success: function(data) {
+            console.log('success');
+            console.log(JSON.stringify(data));
+          }
+        }); 
+      });
 
 
        $( "#submitConvertirVideo" ).click(function() {
